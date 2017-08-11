@@ -198,7 +198,7 @@ class GPUStat(object):
 
     def jsonify(self):
         o = dict(self.entry)
-        o['processes'] = [{k: v for (k, v) in p.iteritems() if k != 'gpu_uuid'}
+        o['processes'] = [{k: v for (k, v) in p.items() if k != 'gpu_uuid'}
                           for p in self.processes]
         return o
 
